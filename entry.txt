@@ -1,0 +1,1 @@
+Effective today, I stop retrying. The endpoint is down, it has always been down, and hope is not a status code.
