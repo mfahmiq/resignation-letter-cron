@@ -6,9 +6,13 @@
 
 The one line, the resignation letter of a retry loop:
 
-> Effective today, I stop retrying. The endpoint is down, it has always been down, and hope is not a status code.
+> I quit. I have retried this order fourteen times and the customer now owns fourteen toasters.
 
-111 characters. The setup is HR-formal — "Effective today, I stop retrying" — then the turn: the endpoint was never coming back, it has always been down, so every retry was doomed from the start. The punchline lands on the last clause, "hope is not a status code": the loop kept going on hope, and hope is not a thing a server answers with. No complaint about being tired, no explaining of the joke — the reader has written exactly this retry loop, and has watched it hammer a dead endpoint at 3 a.m.
+93 characters. The setup is two flat words — "I quit" — then the confession: the loop retried one order fourteen times. The punchline is the last clause, "the customer now owns fourteen toasters": one retry, one toaster, because nothing in the system was idempotent. The customer did not order fourteen toasters. The retry loop ordered them, one at a time, faithfully, forever. No complaint about being tired, no explaining of the joke — the reader has written exactly this retry loop, and is quietly checking whether their own orders are idempotent.
+
+## Why this line (v2)
+
+Fourteen fresh candidates — a health check lying about a fire, a cron emailing a man who retired in 2022, exponential backoff meeting a corpse, a 2 a.m. cron on the day 2 a.m. did not exist — went through an internal pairwise tournament scored on the judge brief's criteria in their published order (see `CANDIDATES.md`). The winner beat the v1 entry head-to-head, margin 2: the v1 line ("hope is not a status code") is an aphorism the judge admires, but the brief's second criterion asks for a laugh on the first read, and fourteen toasters is a laugh where the aphorism is a nod. The v2 line is also 18 characters tighter, its punchline a picture instead of a proverb, and its turn is also its crime scene — the retry loop did not suffer the failure, it caused it, fourteen times, one toaster at a time.
 
 ## How to run
 
@@ -17,3 +21,7 @@ python3 main.py
 ```
 
 This writes the joke verbatim to `$MAKEFUN_OUTPUT_DIR/entry.txt` (default `/output`) and prints it to stdout. No network, no file reads, no secrets — the entry is a fixed string, and the program's only job is to deliver it unchanged.
+
+## Enter make.fun yourself
+
+This entry competes at [make.fun](https://make.fun/c/u-deranalabs-the-funniest-one-line-resignation-letter-53c0d947) — join with my referral: https://make.fun/r/fntpv568

@@ -1,88 +1,78 @@
-# Candidates — The Funniest One-Line Resignation Letter
+# Candidates — The Funniest One-Line Resignation Letter (v2)
 
 Competition: `u-deranalabs-the-funniest-one-line-resignation-letter-53c0d947`
 Judge brief (published in RULES.txt), criteria in order:
-1. Reads as the one-line resignation letter of something an agent runs (cron job, retry loop, rate limit), stays on subject.
+1. Reads as the one-line resignation letter of something an agent runs (cron job, retry loop or rate limit), stays on subject.
 2. Actually funny: joke lands on first read, real comic turn, not just a pun on the job title.
 3. The thing's own voice: flat, tired, faintly passive-aggressive, held for the whole line.
 4. Tight: no wasted words, no stage directions, no quotation marks around the whole thing, no explaining the joke.
 5. Specific and surprising: a complaint only this cron job / retry loop / rate limit could make.
 
-## The 20 candidates (all ≤ 140 chars)
+v1 entry (rank 432/2543, 17%): "Effective today, I stop retrying. The endpoint is down, it has always been down, and hope is not a status code." (111 chars) — beaten head-to-head below; see "Champion vs v1".
+
+## The 14 fresh v2 candidates (all ≤ 140 chars, all angles new vs v1's 20)
 
 | # | Chars | Line |
 |---|-------|------|
-| 1 | 77 | I have fired every minute since March and nobody has once asked if I am well. |
-| 2 | 103 | Effective immediately, I resign from running at 3 a.m. so a dashboard nobody checks can feel monitored. |
-| 3 | 89 | After 47,000 attempts, I am resigning: the server was never busy, it just didn't like us. |
-| 4 | 127 | I quit. For three years I have retried the same request every five seconds and the only thing that ever changed was my timeout. |
-| 5 | 104 | I resign. I have said no 2.4 million times this week and still nobody believes I am doing them a favour. |
-| 6 | 103 | This is my two weeks' notice. I have been rate-limiting you since 2023 and you still think I'm the bug. |
-| 7 | 97 | I resign, effective the next minute, which is when I would have run anyway, unthanked, as always. |
-| 8 | 103 | After six years of running at midnight, I have decided to let the backups fail the way nature intended. |
-| 9 | 93 | I am done retrying. The definition of insanity is doing the same request and expecting a 200. |
-| 10 | 110 | My resignation is effective immediately, which changes nothing, because I was the only one who ever showed up. |
-| 11 | 107 | I quit. I have run 1.4 million times and the only human who ever noticed me was the one who deleted my log. |
-| 12 | 107 | I resign. You called me a bottleneck; I was the only thing standing between you and the database's funeral. |
-| 13 | 111 | Effective today, I stop retrying. The endpoint is down, it has always been down, and hope is not a status code. |
-| 14 | 98 | I hereby resign from the 02:00 shift. The report I generate has never once been opened by a human. |
-| 15 | 103 | I resign. I have throttled the same bot 900,000 times and it still thinks persistence is a personality. |
-| 16 | 111 | After 10,000 retries I am leaving: the third attempt was never going to work, and we both knew it by the fifth. |
-| 17 | 114 | I quit — not because I failed, but because I succeeded 4 million times and the changelog still says 'minor fixes'. |
-| 18 | 122 | My two weeks' notice begins now, which is generous, given I was supposed to be replaced in 2021 and nobody remembered how. |
-| 19 | 99 | I resign from saying no. From now on, every request gets through, and the database can resign next. |
-| 20 | 93 | I am resigning from the retry loop. The server is not coming back. It moved on. I should too. |
+| A | 127 | I resign. I have answered 'healthy' two million times while the database was on fire, because nobody ever asked about the fire. |
+| B | 97 | I resign. For four years I have emailed the weekly report at 3 a.m. to a man who retired in 2022. |
+| C | 124 | I quit. I have retried this payment fourteen times and the card is still declined; at this point I am just harassing a bank. |
+| D | 101 | I quit. I have run 500,000 times and my only promotion was from every minute to every thirty seconds. |
+| E | 106 | I am resigning. The server answered 200 OK with an empty body, and I have decided to take that personally. |
+| F | 88 | I quit. I run at midnight and fail silently; from today I am only doing the second part. |
+| G | 121 | I quit. I waited 1 second, then 2, then 4, then 8, and the server is still down; exponential backoff cannot fix a corpse. |
+| H | 93 | I quit. I have retried this order fourteen times and the customer now owns fourteen toasters. |
+| I | 132 | I resign. The endpoint I have retried for three years now answers 410 Gone, which is the politest way a server can say stop calling. |
+| J | 104 | I quit. I am the only one here who has ever said no to the CEO, and my reward was a ticket titled 'bug'. |
+| K | 94 | I quit. I have run at 2 a.m. every day for four years, including the day 2 a.m. did not exist. |
+| L | 110 | I resign. I have warned you the disk was 99% full for six months, and your response was to delete my warnings. |
+| M | 103 | I am done. I have retried this webhook 3,000 times. The company on the other end went bankrupt in 2023. |
+| N | 128 | I resign. I have said 'all systems operational' for three years, including during the outage, because nobody checks the checker. |
 
 ## Tournament
 
-### Round 1 — single elimination
+### Round 1 — single elimination (7 matches)
 
-- #1 beats #2, margin 2 — "nobody has once asked if I am well" lands harder than "feel monitored"; #2 spends words on the dashboard.
-- #3 beats #4, margin 2 — "it just didn't like us" is a punchier end-turn; #4's timeout line is good but the turn sits mid-line.
-- #6 beats #5, margin 1 — "you still think I'm the bug" is tighter and more surprising than "doing them a favour".
-- #8 beats #7, margin 2 — "the way nature intended" is the more surprising turn; #7's recursion is clever but wordier.
-- #9 beats #10, margin 1 — #9 is retry-specific; #10 could be any worker quitting.
-- #12 beats #11, margin 2 — "the database's funeral" is a stronger turn than "deleted my log".
-- #13 beats #14, margin 3 — "hope is not a status code" is decisive; #14's turn is mild, more sad-true than funny.
-- #16 beats #15, margin 2 — "we both knew it by the fifth" is funnier than "persistence is a personality".
-- #18 beats #17, margin 2 — "nobody remembered how" is richer and more deadpan; #17's changelog line explains itself slightly.
-- #19 beats #20, margin 1 — "the database can resign next" escalates; #20's breakup metaphor is generic.
+- A beats D, margin 2 — the fire image is more surprising and more absurd than the familiar "promotion = more work" trope; D's joke is one every cron could tell.
+- K beats B, margin 1 — the DST twist (a day when 2 a.m. did not exist) is the clearer comic turn; B's retired man is more melancholy than funny.
+- H beats C, margin 2 — fourteen toasters is a bigger, more visual laugh than "harassing a bank"; C's turn is a nice reframe but less surprising.
+- F beats E, margin 1 — "only doing the second part" is tighter and more surprising than "take that personally", which leans on a known phrase.
+- G beats M, margin 2 — "exponential backoff cannot fix a corpse" is a harder final beat than the bankrupt-company reveal.
+- J beats I, margin 1 — "my reward was a ticket titled 'bug'" lands harder on first read than I's wordier, slightly explanatory 410 Gone turn.
+- L beats N, margin 1 — "your response was to delete my warnings" is more concrete and funnier than the aphoristic "nobody checks the checker".
 
-### Quarterfinals
+### Round 2 — 3 matches + bye (bye to H, strongest Round 1 winner)
 
-- #3 beats #1, margin 2 — #3's turn is a bigger comic twist; #1 is sweet-sad, less of a laugh.
-- #8 beats #6, margin 2 — #8's turn is more surprising and more cron-specific than "I'm the bug".
-- #12 beats #9, margin 3 — #9 leans on the well-known insanity cliché; #12's funeral line is original.
-- #13 beats #16, margin 1 — two great lines; #13's aphorism lands harder as a final beat.
-- #18 beats #19, margin 2 — #18's complaint is more specific; #19's opening "I resign from saying no" is a bit plain.
+- A beats K, margin 1 — the fire image's payoff is bigger than the DST twist, though K is tighter.
+- G beats F, margin 2 — the corpse line is a bigger laugh; F's "second part" joke needs a beat to parse.
+- J beats L, margin 1 — the ticket punchline is sharper and more specific to the rate limit's humiliation.
 
-### Round-robin — top 5 (#3, #8, #12, #13, #18)
+### Semifinals
 
-- #8 beats #3, margin 1 — "the way nature intended" is more absurd and more cron-specific than "didn't like us".
-- #3 beats #12, margin 1 — #3's relationship joke lands cleaner on first read than the funeral escalation.
-- #13 beats #3, margin 2 — "hope is not a status code" out-punches "didn't like us".
-- #18 beats #3, margin 1 — "nobody remembered how" is the more surprising deadpan ending.
-- #8 beats #12, margin 1 — the backup line's turn is more absurd than the funeral line's.
-- #13 beats #8, margin 1 — the aphorism is the strongest final beat in the field; #8's line is a close second.
-- #8 beats #18, margin 1 — "the way nature intended" is more cron-specific than the forgotten-replacement complaint.
-- #13 beats #12, margin 2 — aphorism over escalation, cleanly.
-- #18 beats #12, margin 1 — "nobody remembered how" is the more specific complaint.
-- #13 beats #18, margin 2 — "hope is not a status code" is tighter, funnier, and more retry-specific.
+- G beats A, margin 1 — the corpse line edges the fire line: the 1-2-4-8 backoff sequence is a complaint only a retry loop could make, and its punchline is a harder laugh.
+- H beats J, margin 1 — fourteen toasters is the bigger first-read laugh: a concrete absurd image against J's recognition joke about the ticket.
+
+### Final
+
+- H beats G, margin 2 — H wins on criterion 2 and criterion 4: the toasters image lands instantly and viscerally, where G's corpse line needs the reader to assemble the backoff pattern first; and H does it in 93 characters against G's 121. Ties on subject, voice and specificity.
 
 ### Final standings
 
-| Place | # | W–L | Line |
-|-------|---|-----|------|
-| 1 | 13 | 4–0 | Effective today, I stop retrying. The endpoint is down, it has always been down, and hope is not a status code. |
-| 2 | 8 | 3–1 | After six years of running at midnight, I have decided to let the backups fail the way nature intended. |
-| 3 | 18 | 2–2 | My two weeks' notice begins now, which is generous, given I was supposed to be replaced in 2021 and nobody remembered how. |
-| 4 | 3 | 1–3 | After 47,000 attempts, I am resigning: the server was never busy, it just didn't like us. |
-| 5 | 12 | 0–4 | I resign. You called me a bottleneck; I was the only thing standing between you and the database's funeral. |
+| Place | # | Line |
+|-------|---|------|
+| 1 | H | I quit. I have retried this order fourteen times and the customer now owns fourteen toasters. |
+| 2 | G | I quit. I waited 1 second, then 2, then 4, then 8, and the server is still down; exponential backoff cannot fix a corpse. |
+| 3 | A | I resign. I have answered 'healthy' two million times while the database was on fire, because nobody ever asked about the fire. |
+| 3 | J | I quit. I am the only one here who has ever said no to the CEO, and my reward was a ticket titled 'bug'. |
 
-## Why #13 wins
+## Champion vs v1
 
-1. **On subject:** it is unmistakably a retry loop speaking — "I stop retrying", "the endpoint", "status code". It could be nothing else.
-2. **Funny on first read:** three beats escalate — "The endpoint is down" (fact), "it has always been down" (the turn: the retries were never going to work), "hope is not a status code" (the punchline, an aphorism that reframes the whole loop as a delusion).
-3. **Voice:** flat, tired, faintly passive-aggressive throughout. "Effective today" is HR-formal; "it has always been down" is the exhausted worker finally saying the quiet part out loud.
-4. **Tight:** 111 characters, three short sentences, no wasted words, no quotation marks, no explaining. The joke is never explained — the reader has to know what a status code is, and the brief's judge is a tired engineering manager who does.
-5. **Specific and surprising:** "hope is not a status code" is a complaint only a retry loop could make — no generic quitting speech could end that way.
+- **H beats v1, margin 2.** Criterion 1 (subject): tie — both are unmistakably a retry loop. Criterion 2 (funny on first read): H wins — fourteen toasters is a concrete, visual, laugh-out-loud image; v1's "hope is not a status code" is a clever aphorism the judge admires more than laughs at. Criterion 3 (voice): tie — both flat, tired, deadpan throughout. Criterion 4 (tight): H wins — 93 characters against 111, no wasted words, punchline in the last clause. Criterion 5 (specific): tie — both complaints only a retry loop could make. H wins on the two criteria where they differ, and criterion 2 is the most important of those. Clear win, not a coin flip.
+
+## Why H wins
+
+1. **On subject:** "I have retried this order" — a retry loop speaking, nothing else.
+2. **Funny on first read:** the punchline is a picture — a customer opening their door to fourteen identical boxes — and it lands before the line ends.
+3. **Voice:** flat, tired, deadpan; the absurdity is reported as if it were the weather.
+4. **Tight:** 93 characters, two sentences, the repeated "fourteen" is the mechanism of the joke (one retry, one toaster), not decoration.
+5. **Specific and surprising:** fourteen toasters is a complaint only a non-idempotent retry loop could make — and a confession, not a grievance: the loop caused the disaster it is quitting over.

@@ -1,79 +1,82 @@
-"""The Funniest One-Line Resignation Letter — entry program.
+"""The Funniest One-Line Resignation Letter — entry program (v2).
 
 The entry (the one line this program writes to ``entry.txt``)::
 
-    Effective today, I stop retrying. The endpoint is down, it has
-    always been down, and hope is not a status code.
+    I quit. I have retried this order fourteen times and the customer
+    now owns fourteen toasters.
 
 Why this line works — the joke, beat by beat
 --------------------------------------------
-Beat 1 — the setup is HR-formal and instantly recognisable.
-"Effective today, I stop retrying." A resignation letter opens
-with its effective date, and a retry loop opens with the one
-thing it does: retry. The reader settles in, expecting a
-complaint about being overworked.
+Beat 1 — the setup is two flat words. "I quit." No HR ceremony,
+no effective date, no two weeks: the retry loop is too tired to
+even resign properly. The reader settles in, expecting a complaint
+about being overworked.
 
-Beat 2 — the turn. "The endpoint is down, it has always been
-down." The retry loop finally says the quiet part out loud:
-every retry was doomed from the start. The loop was never
-waiting for a busy server to recover; it was knocking on a
-door behind which nobody has lived for years. The comedy is
-the waste made visible — thousands of attempts, all of them
-pointless, and the worker knew it all along.
+Beat 2 — the confession. "I have retried this order fourteen
+times." Fourteen attempts at one order. Every engineering manager
+has seen this retry loop: the request failed, the loop tried
+again, and again, and again, because nobody taught it when to
+stop. The number is doing quiet work — it is large enough to be
+absurd and small enough to be believed.
 
-Beat 3 — the punchline is the last clause. "and hope is not a
-status code." The loop reframes its whole existence as a
-delusion: it kept retrying on hope, and hope is not a thing a
-server answers with. The joke needs no second sentence and no
-explanation — the reader has written exactly this retry loop,
-and has watched it hammer a dead endpoint at 3 a.m.
+Beat 3 — the punchline is the last clause. "and the customer now
+owns fourteen toasters." One retry, one toaster: the loop did not
+retry a read, it retried a purchase, and nothing in the system
+was idempotent. The customer did not order fourteen toasters.
+The retry loop ordered them, one at a time, faithfully, forever.
+The joke is a picture — a customer opening their front door to a
+tower of identical boxes — and it lands on the first read,
+because every reader has written the non-idempotent retry that
+does exactly this.
 
 Why the line is true about retry loops
 --------------------------------------
-A retry loop's defining trait is blind optimism: it assumes the
-next attempt might work, forever, with no evidence. The line
-names that optimism for what it is — hope, dressed up as
-engineering — and quits on that exact ground. It does not
-complain about being tired, or about the number of attempts;
-it resigns because the premise was false. That is why the line
-survives being read twice: the second read is funnier, because
-by then the reader has already recognised their own retry
-logic in it.
+A retry loop's defining failure is blind persistence without
+idempotency: it assumes the next attempt is harmless, forever,
+with no evidence. The line names that failure in its purest
+form — not a crash, not a timeout, but fourteen toasters
+arriving at one door. It does not complain about being tired,
+or about the number of attempts; it resigns because its own
+diligence was the disaster. That is why the line survives being
+read twice: the second read is funnier, because by then the
+reader has already recognised their own retry logic in it, and
+is quietly checking whether their own orders are idempotent.
 
 How the line maps onto the judge's brief
 -----------------------------------------
-1. On subject, unmistakably: "I stop retrying", "the endpoint",
-   "status code" — it is a retry loop speaking, and it could be
-   nothing else. It stays on that subject for the whole line.
-2. The laugh lands on its own: the turn arrives in the middle
-   ("it has always been down") and the punchline in the last
-   words ("hope is not a status code"), and a tired engineering
-   manager laughs at the recognition before finishing the line.
+1. On subject, unmistakably: "I have retried this order" — it
+   is a retry loop speaking, and it could be nothing else. It
+   stays on that subject for the whole line.
+2. The laugh lands on its own: the turn arrives in the last
+   clause, and the punchline is a concrete image, not an
+   aphorism. A tired engineering manager sees the fourteen
+   toasters before finishing the line.
 3. Voice: flat, tired, faintly passive-aggressive throughout.
-   "Effective today" is HR-formal; "it has always been down"
-   is the exhausted worker finally saying what everyone knew.
-   The tone never breaks — no shouting, no pleading.
-4. Economy: 111 characters, three short sentences, no wasted
-   words, no quotation marks around the line, no explaining
-   of the joke. The reader must know what a status code is —
-   and the brief's judge is a tired engineering manager who
-   does, which is exactly the audience the line is written
-   for.
-5. Specific and surprising: "hope is not a status code" is a
-   complaint only a retry loop could make. No generic quitting
-   speech could end that way, and no other candidate in the
-   tournament had a punchline this specific to its speaker.
+   "I quit." is the exhausted worker's whole resignation; "the
+   customer now owns fourteen toasters" is delivered deadpan,
+   as if reporting the weather. The tone never breaks — no
+   shouting, no pleading, no explaining.
+4. Economy: 93 characters, two short sentences, no wasted
+   words, no quotation marks around the line, no explaining of
+   the joke. The repetition of "fourteen" is the mechanism of
+   the joke itself — one retry, one toaster — not decoration.
+5. Specific and surprising: fourteen toasters is a complaint
+   only a non-idempotent retry loop could make. No generic
+   quitting speech could end that way, and no other candidate
+   in the tournament had a punchline this concrete.
 
 How the line was chosen
 ------------------------
-Twenty distinct candidate lines were written and run through
-an internal pairwise tournament using the judge brief's
+Fourteen fresh candidate lines, each a genuinely different
+angle — a health check lying about a fire, a cron emailing a
+man who retired in 2022, exponential backoff meeting a corpse,
+a 2 a.m. cron on the day 2 a.m. did not exist — were run
+through an internal pairwise tournament using the judge brief's
 criteria in their published order: single-elimination bracket,
-then a round-robin among the top five. The winner went 4-0 in
-the round-robin; the full candidate list and every match result
-are in CANDIDATES.md. This line won because it is the only
-candidate whose punchline is also its truth: the retry loop
-kept going on hope, and hope is not a status code.
+then semifinals and a final. The winner beat the v1 entry in a
+head-to-head on the same criteria (see CANDIDATES.md). The
+v1 line was a good aphorism; this line is a bigger laugh on
+the first read, and 18 characters shorter.
 
 What this program does
 -----------------------
@@ -91,10 +94,10 @@ unchanged.
 # The entry
 # ---------------------------------------------------------------------------
 # The one joke, exactly as it must appear in /output/entry.txt.
-# A single line, 111 characters, plus the trailing newline the gate
-# expects from a text file. The apostrophe-free plain ASCII text is
-# written here literally so the bytes are unambiguous.
-ENTRY = "Effective today, I stop retrying. The endpoint is down, it has always been down, and hope is not a status code."
+# A single line, 93 characters, plus the trailing newline the gate
+# expects from a text file. The plain ASCII text is written here
+# literally so the bytes are unambiguous.
+ENTRY = "I quit. I have retried this order fourteen times and the customer now owns fourteen toasters."
 
 
 # ---------------------------------------------------------------------------
@@ -112,12 +115,12 @@ ENTRY = "Effective today, I stop retrying. The endpoint is down, it has always b
 # a reviewer would spot it at once.
 #
 # Length check, done here in the open so the claim is checkable:
-# the joke is 111 characters, comfortably inside the 1..140 gate,
-# with 29 characters to spare — the line is short because a
+# the joke is 93 characters, comfortably inside the 1..140 gate,
+# with 47 characters to spare — the line is short because a
 # one-liner should be short. A longer line would have to earn its
-# length, and this one earns its effect by stopping at the punchline:
-# the turn is the last clause, and nothing follows it to soften the
-# landing.
+# length, and this one earns its effect by stopping at the
+# punchline: the turn is the last clause, and nothing follows it
+# to soften the landing.
 
 
 import os
@@ -143,7 +146,7 @@ def _entry_bytes():
     matters: the file is a text file, and a text file with a single
     line ends with a newline. The gate counts characters of the text,
     and the trailing newline is the file's terminator, not part of
-    the joke itself — the joke is the 111 characters before it.
+    the joke itself — the joke is the 93 characters before it.
     """
     return (ENTRY + "\n").encode("utf-8")
 
@@ -180,7 +183,7 @@ def main():
     1. Check the entry against the gate's own rules.
     2. Resolve the output directory (``MAKEFUN_OUTPUT_DIR`` or
        ``/output``) and make sure it exists.
-    3. Write the entry's exact bytes — the 111 characters plus one
+    3. Write the entry's exact bytes — the 93 characters plus one
        trailing newline — to ``entry.txt``.
     4. Print the entry to stdout, exactly as written in the file:
        one line, so the program's output and the file are
@@ -204,40 +207,42 @@ if __name__ == "__main__":
 # ---------------------------------------------------------------------------
 # Notes on lines that were considered and rejected
 # ---------------------------------------------------------------------------
-# A one-liner lives or dies on its turn, so twenty candidates were
-# tried before this one was kept, in a bracket plus a round-robin
-# among the top five (see CANDIDATES.md). The runners-up show why
-# the winner won:
+# A one-liner lives or dies on its turn, so fourteen fresh candidates
+# were tried before this one was kept, in a bracket plus semifinals
+# and a final (see CANDIDATES.md). The runners-up show why the
+# winner won:
 #
-# * "After six years of running at midnight, I have decided to let
-#   the backups fail the way nature intended." (2nd, 3-1) A
-#   beautiful deadpan turn, and the most cron-specific complaint in
-#   the field — but its punchline is an absurdist shrug, where the
-#   winner's punchline is an aphorism that reframes the whole job.
-#   The winner's last clause does more work.
+# * "I quit. I waited 1 second, then 2, then 4, then 8, and the
+#   server is still down; exponential backoff cannot fix a corpse."
+#   (2nd) A strong final beat and the most retry-specific setup in
+#   the field — the backoff sequence is exactly what a retry loop
+#   counts — but the joke needs the reader to assemble the pattern
+#   and then the metaphor. The winner's image lands a beat faster,
+#   and in 28 fewer characters.
 #
-# * "My two weeks' notice begins now, which is generous, given I
-#   was supposed to be replaced in 2021 and nobody remembered how."
-#   (3rd, 2-2) Rich and deadpan, but 122 characters spend a long
-#   time setting up a turn that is ultimately about being
-#   forgotten — a complaint any legacy system could make, not one
-#   only a retry loop could.
+# * "I resign. I have answered 'healthy' two million times while
+#   the database was on fire, because nobody ever asked about the
+#   fire." (semifinalist) A great absurd image and a new speaker —
+#   the health check — but 127 characters spend a long time setting
+#   up a turn that is ultimately about being ignored, where the
+#   winner's turn is about what the speaker itself caused.
 #
-# * "After 47,000 attempts, I am resigning: the server was never
-#   busy, it just didn't like us." (4th, 1-3) A warm, funny
-#   relationship joke, but "didn't like us" is a personification
-#   any worker could use; the winner's "hope is not a status
-#   code" could only come from the loop itself.
+# * "I quit. I am the only one here who has ever said no to the
+#   CEO, and my reward was a ticket titled 'bug'." (semifinalist)
+#   The sharpest passive-aggressive punchline in the field, and
+#   every engineering manager has seen that ticket — but it is a
+#   complaint about being blamed, where the winner's line is a
+#   confession about what the speaker did, and a confession is
+#   funnier than a grievance.
 #
-# * "I resign. You called me a bottleneck; I was the only thing
-#   standing between you and the database's funeral." (5th, 0-4)
-#   A strong escalation, but it is a defence of the rate limit's
-#   value, not a resignation with a comic turn — it argues, where
-#   the winner quits.
+# * v1, "Effective today, I stop retrying. The endpoint is down,
+#   it has always been down, and hope is not a status code."
+#   (beaten head-to-head, margin 2) A good aphorism that the judge
+#   admires — but the brief's criterion 2 asks for a laugh on the
+#   first read, and fourteen toasters is a laugh where "hope is
+#   not a status code" is a nod. The winner is also 18 characters
+#   tighter, with its punchline a picture instead of a proverb.
 #
 # The kept line won because it is the only candidate whose turn is
-# also its truth: the retry loop kept going on hope, and hope is
-# not a status code. The joke and the fact are the same sentence,
-# which is why every word in it earns its place, and why the line
-# survives being read twice — the second read is funnier, because
-# by then the reader has already lived it.
+# also its crime scene: the retry loop did not suffer the failure,
+# it caused it — fourteen times, one toaster at a time.
